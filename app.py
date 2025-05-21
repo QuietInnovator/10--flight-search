@@ -11,15 +11,13 @@ st.set_page_config(page_title="Flight Finder", layout="wide")
 
 # App title and description
 st.title("🛫 Smart Flight Finder")
-st.markdown("Find the best one-way nonstop flights with AI-powered recommendations")
+st.markdown("Find the best one-way flights with AI-powered recommendations")
 
 # Sidebar for API keys
 with st.sidebar:
-    st.header("API Configuration")
     openai_api_key = st.secrets["OPENAI_API_KEY"]
     serper_api_key = st.secrets["SERPER_API_KEY"]
     
-    st.markdown("---")
     st.markdown("### How it works")
     st.markdown("""
     1. Enter your origin and destination cities
@@ -49,7 +47,7 @@ def search_flights(origin, destination, date, serper_key):
     formatted_date = date.strftime("%Y-%m-%d")
     
     # Construct search query - make it more specific
-    query = f"one way nonstop flight from {origin} to {destination} on {formatted_date} flight price"
+    query = f"one way flight from {origin} to {destination} on {formatted_date} flight price"
     
     url = "https://google.serper.dev/search"
     payload = json.dumps({
