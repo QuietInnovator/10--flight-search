@@ -255,4 +255,4 @@ if st.button("Search Flights", type="primary"):
 
 # Footer
 st.markdown("---")
-st.caption("This application uses OpenAI and Serper API to find and analyze flight options.")
+st.caption("This application uses OpenAI and Serper API to find and analyze flight options. - chadi abi fadel")
