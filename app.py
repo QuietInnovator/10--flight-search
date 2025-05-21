@@ -102,7 +102,7 @@ def analyze_flights(search_results, openai_key):
     # Send to OpenAI for analysis
     try:
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model="gpt-4o-mini",
             messages=[
                 {"role": "system", "content": """
                 You are an expert flight finder assistant. Your task is to analyze search results and extract flight information.
